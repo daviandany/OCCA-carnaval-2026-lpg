@@ -12,33 +12,35 @@ interface RoomProps {
 }
 
 const RoomCard: React.FC<RoomProps> = ({ name, type, description, capacity, image }) => (
-  <div className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+  <div className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col">
     <div className="relative aspect-[16/10] overflow-hidden">
       <img 
-        src={image} 
-        alt={name} 
-        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
-      />
-      <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 text-[10px] font-bold uppercase tracking-widest border border-black">
+                src={image}
+                alt={name}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                style={{ boxShadow: '0 10px 15px -3px rgba(236, 72, 153, 0.4), 0 4px 6px -2px rgba(236, 72, 153, 0.2)' }}
+              />      <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 text-[10px] font-bold uppercase tracking-widest border border-black">
         {type}
       </div>
     </div>
-    <div className="p-8">
-      <div className="flex justify-between items-start mb-4">
-        <div>
-          <h3 className="font-serif text-3xl mb-1">{name}</h3>
-          <p className="text-occaRed text-xs font-bold uppercase tracking-widest">{capacity}</p>
+    <div className="p-8 flex flex-col flex-grow">
+      <div className="flex-grow">
+        <div className="flex justify-between items-start mb-4">
+          <div>
+            <h3 className="font-serif text-3xl mb-1">{name}</h3>
+            <p className="text-occaRed text-xs font-bold uppercase tracking-widest">{capacity}</p>
+          </div>
         </div>
-      </div>
-      <p className="text-gray-500 text-sm leading-relaxed mb-6">
-        {description}
-      </p>
-      <div className="flex flex-wrap gap-2 mb-8">
-        {['Wi-Fi 500mb', 'Café da Manhã', 'Acesso Maker'].map(tag => (
-          <span key={tag} className="text-[9px] uppercase tracking-tighter bg-concrete px-2 py-1 text-gray-500 font-semibold">
-            {tag}
-          </span>
-        ))}
+        <p className="text-gray-500 text-sm leading-relaxed mb-6">
+          {description}
+        </p>
+        <div className="flex flex-wrap gap-2 mb-8">
+          {['Wi-Fi 500mb', 'Salão central de convivência', 'Cozinha compartilhada', 'quintal amplo pra descansos ou encontros'].map(tag => (
+            <span key={tag} className="text-[9px] uppercase tracking-tighter bg-concrete px-2 py-1 text-gray-500 font-semibold">
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
       <button className="w-full bg-black text-white py-4 font-bold uppercase tracking-widest hover:bg-green-600 transition-colors flex items-center justify-center gap-3">
         Reservar via WhatsApp
@@ -54,7 +56,7 @@ const RoomsSection: React.FC = () => {
       id: '1',
       name: 'Suíte Domo',
       type: 'Premium',
-      capacity: 'Casal + 1',
+      capacity: 'até 12 pessoas',
       description: 'Nossa suíte principal, com vista direta para os telhados históricos de Olinda. Decoração minimalista com toques de artesanato local.',
       image: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80&w=800',
     },
@@ -62,7 +64,7 @@ const RoomsSection: React.FC = () => {
       id: '2',
       name: 'Quarto Galeria',
       type: 'Standard',
-      capacity: 'Até 6 Pessoas',
+      capacity: 'Até 12 Pessoas',
       description: 'Espaço amplo e arejado, ideal para grupos de amigos. Pé direito alto e janelas coloniais originais preservadas.',
       image: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80&w=800',
     },
@@ -70,9 +72,17 @@ const RoomsSection: React.FC = () => {
       id: '3',
       name: 'Studio Maker',
       type: 'Compact',
-      capacity: 'Solo ou Casal',
+      capacity: '4 pessoas ou 2 casais',
       description: 'Para quem busca praticidade. Localizado próximo ao nosso jardim interno, oferece tranquilidade em meio à festa.',
       image: 'https://images.unsplash.com/photo-1505691938895-1758d7eaa511?auto=format&fit=crop&q=80&w=800',
+    },
+    {
+      id: '4',
+      name: 'Espaço Artesão',
+      type: 'Deluxe',
+      capacity: '4 pessoas ou 2 casais',
+      description: 'Quarto elegante com arte local em destaque. Perfeito para casais que apreciam a cultura pernambucana em cada detalhe da decoração.',
+      image: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=800',
     }
   ];
 
@@ -84,7 +94,7 @@ const RoomsSection: React.FC = () => {
           <h3 className="font-serif text-5xl md:text-6xl leading-tight text-center md:text-left">Durma no <span className="italic">conforto</span>, acorde no <span className="text-occaRed italic">fervo</span>.</h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 rounded-2xl shadow-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 rounded-2xl shadow-lg">
           {rooms.map(room => <RoomCard key={room.id} {...room} />)}
         </div>
 
