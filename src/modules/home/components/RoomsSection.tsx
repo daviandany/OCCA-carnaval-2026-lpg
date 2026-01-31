@@ -85,11 +85,11 @@ const RoomsSection: React.FC = () => {
         </div>
 
         <div className="mt-20 px-6 py-8 md:p-12 bg-gradient-to-br from-gray-50 to-gray-100 text-gray-900 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 rounded-2xl shadow-xl relative overflow-hidden border-l-4 border-occaRed">
-          {/* Detalhe minimalista: pontos coloridos nos cantos */}
+
           <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-300 rounded-full blur-3xl opacity-25 -z-0"></div>
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-300 rounded-full blur-3xl opacity-25 -z-0"></div>
           
-          {/* Linha decorativa sutil */}
+          
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-occaRed via-yellow-400 to-purple-500 opacity-40"></div>
           
           <div className="flex-1 relative z-10">
