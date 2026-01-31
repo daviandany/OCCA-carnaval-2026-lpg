@@ -77,28 +77,28 @@ const RoomsSection: React.FC = () => {
       <div className="container mx-auto">
         <div className="max-w-3xl mb-16">
           <h2 className="text-sm font-bold uppercase tracking-[0.4em] text-gray-400 mb-4 text-center md:text-left">Acomodações Exclusivas</h2>
-          <h3 className="font-serif text-5xl md:text-6xl leading-tight text-center md:text-left">Durma no <span className="italic">conforto</span>, acorde no <span className="text-occaRed italic">fervo</span>.</h3>
+          <h3 className="font-serif text-5xl md:text-6xl leading-tight text-center md:text-left">Durma no <span className="italic">sossego</span>, acorde na <span className="text-occaRed italic">folia</span>.</h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {rooms.map(room => <RoomCard key={room.id} {...room} />)}
         </div>
 
-        <div className="mt-20 p-12 bg-black text-white flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="max-w-xl">
-            <h4 className="font-serif text-3xl mb-2">Por que ficar na OCCA?</h4>
-            <p className="text-gray-400">
-              Além de uma cama impecável, você terá acesso ao nosso Maker Space, café da manhã regional e estará na Rua Manoel Borba — o coração pulsante do Carnaval de Olinda.
+        <div className="mt-20 px-6 py-8 md:p-12 bg-black text-white flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 rounded-2xl">
+          <div className="flex-1">
+            <h4 className="font-serif text-2xl md:text-3xl mb-3 md:mb-4">Por que ficar na OCCA?</h4>
+            <p className="text-sm md:text-base text-gray-400 leading-relaxed">
+              Imagine acordar no epicentro do Carnaval de Olinda, mas cercado por uma atmosfera de tecnologia. Nossas suítes ficam dentro de um Hub de Inovação. Você não apenas se hospeda; você respira a criatividade do espaço, com o conforto de uma cama impecável a passos dos blocos.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-8 text-center">
+          <div className="grid grid-cols-2 gap-6 md:gap-8 text-center flex-1 md:flex-none">
             <div>
-              <div className="text-occaYellow font-serif text-4xl mb-1">10/10</div>
-              <div className="text-[10px] uppercase tracking-widest font-bold">Localização</div>
+              <div className="text-occaYellow font-serif text-3xl md:text-4xl mb-1 md:mb-2">10/10</div>
+              <div className="text-[8px] md:text-[10px] uppercase tracking-widest font-bold">Localização</div>
             </div>
             <div>
-              <div className="text-occaYellow font-serif text-4xl mb-1">Wi-Fi</div>
-              <div className="text-[10px] uppercase tracking-widest font-bold">Fibra Óptica</div>
+              <div className="text-occaYellow font-serif text-3xl md:text-4xl mb-1 md:mb-2">Wi-Fi</div>
+              <div className="text-[8px] md:text-[10px] uppercase tracking-widest font-bold">Fibra Óptica</div>
             </div>
           </div>
         </div>
