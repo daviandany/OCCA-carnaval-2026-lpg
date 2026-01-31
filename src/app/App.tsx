@@ -6,7 +6,7 @@ import Footer from '../shared/components/Footer';
 import Hero from '../modules/home/components/Hero';
 import CarnivalBanner from '../modules/home/components/CarnivalBanner';
 import RoomsSection from '../modules/home/components/RoomsSection';
-import Services from '../modules/home/components/Services';
+import { Services } from '../modules/home/components/services';
 
 const App: React.FC = () => {
   return (
