@@ -26,12 +26,10 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex items-center gap-10">
           <a href="#quartos" className="text-sm font-medium uppercase tracking-widest hover:text-occaRed transition-colors">Quartos</a>
           <a href="#espaco" className="text-sm font-medium uppercase tracking-widest hover:text-occaRed transition-colors">A Experiência</a>
-          <a href="#eventos" className="text-sm font-medium uppercase tracking-widest hover:text-occaRed transition-colors">Carnaval</a>
-          <a href="#contato" className="text-sm font-medium uppercase tracking-widest hover:text-occaRed transition-colors">Contato</a>
         </div>
 
         <button className="bg-black text-white px-6 py-2 text-sm font-bold uppercase tracking-widest hover:bg-occaRed transition-all transform active:scale-95 shadow-[4px_4px_0px_0px_rgba(255,215,0,1)]">
-          Reservar Agora
+        <a href="https://wa.me/5581991456002" target="_blank">Reservar Agora</a>  
         </button>
 
         <button className="md:hidden">
