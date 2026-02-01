@@ -8,7 +8,6 @@ const Services: React.FC = () => {
       id="espaco"
       className="relative py-24 px-6 bg-white overflow-hidden"
     >
-      {/* Confetes decorativos */}
       <span className="absolute top-16 left-20 w-3 h-3 bg-black rotate-45" />
       <span className="absolute top-32 left-1/3 w-4 h-4 bg-occaYellow rotate-12" />
       <span className="absolute top-24 right-28 w-3 h-3 bg-occaRed rotate-45" />
