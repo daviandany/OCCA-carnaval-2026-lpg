@@ -1,58 +1,89 @@
-
-import React from 'react';
-import { DomeLogo } from './Icons';
+import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-concrete border-t border-gray-200 pt-20 pb-10 px-6">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-3 mb-8">
-              <DomeLogo className="w-10 h-10 text-black" />
-              <span className="text-2xl font-bold tracking-tighter uppercase">OCCA</span>
-            </div>
-            <p className="text-gray-500 max-w-sm text-lg leading-relaxed mb-8">
-              Olinda Creative Community Action. Transformando tradição em tecnologia e cultura em progresso.
-            </p>
-            <div className="flex gap-4">
-              {['Instagram', 'LinkedIn', 'YouTube'].map(social => (
-                <a key={social} href="#" className="w-10 h-10 flex items-center justify-center border border-black hover:bg-black hover:text-white transition-all text-xs font-bold uppercase tracking-tighter">
-                  {social[0]}
-                </a>
-              ))}
-            </div>
-          </div>
-          
-          <div>
-            <h4 className="font-bold uppercase tracking-widest text-xs mb-6">Localização</h4>
-            <p className="text-gray-600 leading-loose">
-              Rua Manoel Borba, 285<br />
-              Carmo, Sítio Histórico<br />
-              Olinda - PE, 53120-000<br />
-              Brasil
+    <footer className="relative bg-occaYellow border-t-4 border-black overflow-hidden">
+
+      {/* Textura lateral igual ao banner */}
+      <div className="absolute top-0 left-0 w-24 h-full opacity-10 bg-[radial-gradient(circle,_black_1px,_transparent_1px)] bg-[size:10px_10px]" />
+      <div className="absolute top-0 right-0 w-24 h-full opacity-10 bg-[radial-gradient(circle,_black_1px,_transparent_1px)] bg-[size:10px_10px]" />
+{/* Confetes espalhados */}
+{/* Topo */}
+<span className="absolute top-12 left-24 w-3 h-3 bg-black rotate-45" />
+<span className="absolute top-20 left-1/3 w-2.5 h-2.5 bg-occaRed rotate-12" />
+<span className="absolute top-16 right-32 w-4 h-4 bg-occaBlue rotate-45" />
+<span className="absolute top-28 right-20 w-3 h-3 bg-black rotate-12" />
+
+{/* Meio */}
+<span className="absolute top-1/2 left-16 w-3 h-3 bg-occaRed rotate-45" />
+<span className="absolute top-1/2 right-24 w-3 h-3 bg-occaBlue rotate-45" />
+<span className="absolute top-[60%] right-1/3 w-2.5 h-2.5 bg-occaRed rotate-12" />
+
+{/* Base */}
+<span className="absolute bottom-40 left-32 w-3 h-3 bg-black rotate-45" />
+<span className="absolute bottom-28 left-1/4 w-4 h-4 bg-occaBlue rotate-12" />
+<span className="absolute bottom-32 right-40 w-3 h-3 bg-occaRed rotate-45" />
+<span className="absolute bottom-20 right-24 w-2.5 h-2.5 bg-black rotate-12" />
+
+
+      <div className="relative z-10 container mx-auto px-6 py-24">
+
+        {/* Conteúdo */}
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-16 mb-20">
+
+          {/* Texto principal */}
+          <div className="md:col-span-3">
+            <h3 className="font-serif text-4xl md:text-5xl font-black uppercase tracking-tight text-black mb-6">
+              OCCA é base, refúgio <br />
+              <span className="text-occaRed">e ponto de encontro</span>
+            </h3>
+
+            <p className="text-xl leading-loose text-black max-w-2xl">
+              No meio do sobe e desce das ladeiras de Olinda, a OCCA vira
+              casa pra quem vive o Carnaval intensamente. Um casarão
+              histórico onde frevo, criatividade e descanso coexistem —
+              tudo a poucos passos da folia.
             </p>
           </div>
 
+          {/* Localização */}
           <div>
-            <h4 className="font-bold uppercase tracking-widest text-xs mb-6">Menu Fast</h4>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-gray-600 hover:text-occaRed transition-colors">Manifesto</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-occaRed transition-colors">Transparência</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-occaRed transition-colors">Projetos Sociais</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-occaRed transition-colors">Carreiras</a></li>
+            <h4 className="bg-black text-occaYellow inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest mb-6">
+              Onde fica a folia
+            </h4>
+            <p className="text-lg leading-relaxed text-black font-medium">
+              Rua Manoel Borba, 285<br />
+              Carmo — Sítio Histórico<br />
+              Olinda / PE<br />
+              Epicentro do Carnaval
+            </p>
+          </div>
+
+          {/* Navegação */}
+          <div>
+            <h4 className="bg-black text-occaYellow inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest mb-6">
+              Explorar
+            </h4>
+            <ul className="space-y-4 text-lg font-bold uppercase tracking-tight text-black">
+              <li>
+                <a href="#quartos" className="hover:text-occaRed transition-colors">
+                  Quartos
+                </a>
+              </li>
+              <li>
+                <a href="#espaco" className="hover:text-occaRed transition-colors">
+                  Experiência OCCA
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-gray-300 gap-6">
-          <p className="text-xs text-gray-400 font-medium">
-            © {new Date().getFullYear()} OCCA - Olinda Creative Community Action. Todos os direitos reservados.
+        {/* Linha final */}
+        <div className="border-t-4 border-black pt-8 text-center">
+          <p className="text-sm font-bold uppercase tracking-widest text-black">
+            © {new Date().getFullYear()} OCCA — feita em Olinda, com frevo no pé
           </p>
-          <div className="flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
-            <a href="#" className="hover:text-black">Política de Privacidade</a>
-            <a href="#" className="hover:text-black">Termos de Uso</a>
-          </div>
         </div>
       </div>
     </footer>

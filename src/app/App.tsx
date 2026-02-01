@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import Navbar from '../shared/components/Navbar';
-import Footer from '../shared/components/Footer';
+import Navbar from "../shared/components/Navbar";
+import Footer from "../shared/components/Footer";
 
-import Hero from '../modules/home/components/Hero';
-import CarnivalBanner from '../modules/home/components/CarnivalBanner';
-import RoomsSection from '../modules/home/components/RoomsSection';
-import Services from '../modules/home/components/Services';
+import Hero from "../modules/home/components/Hero";
+import CarnivalBanner from "../modules/home/components/CarnivalBanner";
+import RoomsSection from "../modules/home/components/RoomsSection";
+import { Services } from "../modules/home/components/services";
 
 const App: React.FC = () => {
   return (
