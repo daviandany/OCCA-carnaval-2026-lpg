@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Structural Background Element */}
-      <div className="container mx-auto text-center z-5">
+      <div className="container mx-auto text-center z-10">
         <div className="flex justify-center">
           <span className="inline-block px-3 py-1 bg-occaYellow text-[10px] font-bold uppercase tracking-[0.3em] text-black">
             Carnaval 2026 • Hospedagem Exclusiva

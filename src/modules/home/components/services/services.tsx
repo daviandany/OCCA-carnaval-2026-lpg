@@ -24,12 +24,12 @@ const Services: React.FC = () => {
         <header className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-xl">
             <h2 className="text-sm font-bold uppercase tracking-[0.4em] text-gray-400 mb-4">
-              Viva o Carnaval na OCCA
+              Viva o Carnaval em OCCA
             </h2>
 
             <h3 className="font-serif text-5xl md:text-6xl leading-tight">
               Mais que um quarto, uma{" "}
-              <span className="italic text-occaYellow bg-black px-2">
+              <span className="italic text-occaYellow bg-black px-2 text-5xl">
                 Experiência Carnavalesca
               </span>
               .
@@ -37,7 +37,7 @@ const Services: React.FC = () => {
           </div>
 
           <p className="text-gray-500 max-w-sm mb-4 leading-relaxed">
-            Ao lado das ladeiras históricas de Olinda, a OCCA é o ponto de
+            Ao lado das ladeiras históricas de Olinda, OCCA é o ponto de
             encontro entre descanso, cultura e criatividade. Durante o
             Carnaval, você vive o frevo, os blocos e a energia da cidade sem
             abrir mão de conforto, conexão e um ambiente criativo pulsante.
